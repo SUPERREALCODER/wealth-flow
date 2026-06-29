@@ -107,7 +107,14 @@ export default function App() {
       setActiveTab={setActiveTab}
       onAddTransaction={() => setIsModalOpen(true)}
     >
-      {activeTab === 'dashboard' && <Dashboard transactions={transactions} />}
+      {activeTab === 'dashboard' && (
+        <Dashboard 
+          transactions={transactions} 
+          budgets={budgets}
+          onAddTransaction={handleAddTransaction}
+          onModifyBudget={handleAddBudget}
+        />
+      )}
       {activeTab === 'transactions' && (
         <TransactionList 
           transactions={transactions} 

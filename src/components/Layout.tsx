@@ -1,5 +1,5 @@
 import React from 'react';
-import { LayoutDashboard, ReceiptText, PieChart, Settings, PlusCircle, Wallet } from 'lucide-react';
+import { LayoutDashboard, ReceiptText, PieChart, Settings, PlusCircle, Wallet, Cpu } from 'lucide-react';
 import { cn } from '../lib/utils';
 
 interface LayoutProps {
@@ -11,9 +11,9 @@ interface LayoutProps {
 
 export default function Layout({ children, activeTab, setActiveTab, onAddTransaction }: LayoutProps) {
   const navItems = [
-    { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
-    { id: 'transactions', label: 'Transactions', icon: ReceiptText },
-    { id: 'budgets', label: 'Budgets', icon: PieChart },
+    { id: 'dashboard', label: 'Agent Cockpit', icon: Cpu },
+    { id: 'transactions', label: 'Ledger Audit', icon: ReceiptText },
+    { id: 'budgets', label: 'Asset Limits', icon: PieChart },
   ];
 
   return (
